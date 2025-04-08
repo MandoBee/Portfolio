@@ -1,0 +1,620 @@
+:root {
+    /*** VarStart ***/
+    --font-main: "Poppins", sans-serif;
+    --font-sub: "Montserrat", serif;
+    --bg-clr: #F7F7F7;
+    --hover-bg-clr: white;
+    --bg-dark-clr: #5B5B5B;
+    /*** VarEnd ***/
+
+    /*** VarDeclareStart ***/
+    .bg-clr {
+        background-color: var(--bg-clr);
+    }
+
+    .bg-dark-clr {
+        background-color: var(--bg-dark-clr);
+    }
+
+    /*** VarDeclareEnd ***/
+
+    /*** GeneralStart ***/
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .logo {
+        font-family: var(--font-sub);
+    }
+
+    h2 {
+        position: relative;
+        width: fit-content;
+        margin: auto;
+        font-family: var(--font-sub);
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        z-index: 2;
+    }
+
+    h2::after {
+        content: "";
+        width: 100%;
+        height: 1.5rem;
+        background-image: url(./../imgs/dots.png);
+        background-repeat: repeat;
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        z-index: -1;
+    }
+
+    h4 {
+        position: relative;
+        text-align: center;
+        font-family: var(--font-sub);
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    .btn {
+        border: black 2px solid;
+    }
+
+    .btn:hover {
+        color: black;
+        background-color: var(--hover-bg-clr);
+    }
+
+    #reverse-hover:hover{
+        color: white !important;
+        background-color: black !important;
+        
+    }
+
+    i {
+        font-size: 1.5rem;
+        background-color: var(--bg-clr);
+        padding: 1rem;
+        margin-top: .75rem;
+        margin-bottom: .25rem;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+    }
+
+    li a i {
+        color: white;
+        background-color: black;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    li a:hover i {
+        color: black;
+        background-color: white;
+        border: black 1px solid;
+    }
+}
+
+/*** GeneralEnd ***/
+
+/* <!-- NavbarStart --> */
+nav {
+    background-image: linear-gradient(rgb(100, 100, 100), rgba(100, 100, 100, .3))
+}
+
+.navbar .nav-link {
+    position: relative;
+    margin-left: 25px;
+}
+
+/* .navbar .nav-link::after {
+    content: "";
+    background-color: white;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -3.8px;
+    left: 0px;
+} */
+
+.navbar .nav-item :focus {
+    border-bottom: 3px white solid;
+}
+
+/* <!-- NavbarEnd --> */
+
+/* <!-- HeadStart --> */
+#header li a:hover i {
+    color: white;
+    background-color: black;
+    border:none;
+}
+
+
+#header {
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../imgs/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+    position: relative;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#header h4 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    padding: 0 .25rem 0 0;
+
+}
+
+#header .job-title h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    white-space: nowrap;
+    padding-top: .25rem;
+
+}
+
+#header {
+    .job-title {
+        overflow: hidden;
+        margin: auto;
+        text-align: left;
+    }
+    .i-am {
+        position: relative;
+    }
+    .job-title .myself {
+        overflow: hidden;
+        border-right: 3px solid;
+        animation: blink .25s infinite;
+        -webkit-animation: blink .25s infinite;
+    }
+    .job-title h3.developer {
+        animation: developer-apperance 10s infinite;
+        -webkit-animation: developer-apperance 10s infinite;
+    }
+    .job-title h3.Designer {
+        animation: designer-apperance 10s infinite;
+        -webkit-animation: designer-apperance 10s infinite;
+    }
+}
+
+@keyframes developer-apperance {
+    0% {
+        width: 0px;
+        z-index: 0;
+    }
+
+    10% {
+        width: 245px;
+        z-index: 1;
+    }
+
+    20% {
+        width: 245px;
+        z-index: 1;
+    }
+
+    30% {
+        width: 0px;
+        z-index: 0;
+    }
+
+    40% {
+        width: 0px;
+        z-index: -2;
+    }
+
+    100% {
+        width: 0px;
+        z-index: -2;
+    }
+}
+
+@keyframes designer-apperance {
+    50% {
+        width: 0px;
+        z-index: 0;
+    }
+
+    60% {
+        width: 200px;
+        z-index: 1;
+    }
+
+    70% {
+        width: 200px;
+        z-index: 1;
+    }
+
+    80% {
+        width: 0px;
+        z-index: 0;
+    }
+
+    90% {
+        width: 0px;
+        z-index: -3;
+    }
+
+    100% {
+        width: 0px;
+        z-index: -3;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: white;
+    }
+
+    100% {
+        border-color: transparent
+    }
+}
+
+/* <!-- HeadEnd --> */
+
+/* <!-- AboutStart --> */
+.btns-sec button a{
+    text-decoration: none !important;
+    color: black;
+}
+.btns-sec button a:hover{
+    color: white;
+}
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.skills {
+    position: relative;
+    overflow: hidden;
+    }
+.progres-detail {
+    position: absolute;
+    width: 0%;    
+}
+.prog1{
+    width: 0%;    
+    animation-name: prog1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes prog1 {
+    from{
+        width: 20%;
+    }
+    to{
+        width: 95%;
+    }
+}
+.prog2{
+    width: 0%;    
+    animation-name: prog2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes prog2 {
+    from{
+        width: 20%;
+    }
+    to{
+        width: 80%;
+    }
+}
+.prog3{
+    width: 0%;    
+    animation-name: prog3;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes prog3 {
+    from{
+        width: 20%;
+    }
+    to{
+        width: 90%;
+    }
+}
+.progres-value p {
+    width: 90%;
+    z-index: 3;
+    animation-name: p-width;
+    animation-duration: 2s;
+    /* animation-delay: 4s; */
+    animation-timing-function: ease-out;
+}
+@keyframes p-width {
+    from{
+        padding-right: 0;
+    }
+    to{
+        padding-right: 30%;
+    }
+}
+/* <!-- AboutEnd --> */
+
+/* <!-- ServicesStart --> */
+.card:hover i {
+    color: white;
+    background-color: black;
+}
+
+/* <!-- ServicesEnd --> */
+
+/* <!-- PortfolioStart --> */
+        /* Stop Botstrap */
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: black;
+    background-color: transparent;
+}
+.nav-pills .nav-link {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+.nav-pills {
+    --bs-nav-pills-link-active-bg: black;
+}
+.nav {
+    --bs-nav-link-hover-color: black;
+}
+        /* Stop Botstrap */
+.ourPortfolioSec li button {
+    background-color: transparent;
+    color: black;
+    font-weight: 600;
+
+}
+.portImgCover {
+    position: relative;
+    overflow: hidden;
+
+}
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+.portImgCover:hover .cover {
+    background-color: rgba(255, 255, 255, 0.9);
+
+}
+.portImgCover i:hover {
+    color: black;
+    background-color: white;
+    border: black 2px solid;
+    opacity: 1;
+
+}
+.portImgCover:hover i,
+.portImgCover:hover b {
+    cursor: pointer;
+    opacity: 1;
+
+}
+.cover i {
+    color: white;
+    background-color: black;
+    font-size: .75rem;
+    margin: 1rem 1rem 0;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    opacity: 0;
+}
+.cover b {
+    font-size: 1rem;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    opacity: 0;
+}
+/* <!-- PortfolioEnd --> */
+
+/* <!-- TestiStart --> */
+#clients button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 0 10px;
+    background-color: #5B5B5B;
+}
+#clients .carousel-inner {
+    min-height: 300px;
+}
+#clients .pic-holder {
+    width: 80px;
+    margin: auto;
+
+}
+#clients img {
+    border: 1px transparent solid;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#clients .carousel-caption {
+    color: black;
+}
+/* <!-- TestiEnd --> */
+
+/* <!-- NumbersStart --> */
+.counterSec h3 {
+    font-weight: 900;
+    font-size: 2rem;
+}
+#happy-cust,
+#comp-proj,
+#lines-code,
+#f-dload {
+    counter-reset: num var(--num);
+}
+#happy-cust {
+    animation: counter-happy-cust 2s ease-in-out;
+    -webkit-animation: counter-happy-cust 2s ease-in-out;
+}
+#comp-proj {
+    animation: counter-comp-proj 2s ease-in-out;
+    -webkit-animation: counter-comp-proj 2s ease-in-out;
+}
+#lines-code {
+    animation: counter-lines-code 2s ease-in-out;
+    -webkit-animation: counter-lines-code 2s ease-in-out;
+}
+#f-dload {
+    animation: counter-f-dload 2s ease-in-out;
+    -webkit-animation: counter-f-dload 2s ease-in-out;
+}
+#happy-cust::before,
+#comp-proj::before,
+#lines-code::before,
+#f-dload::before {
+    content: counter(num);
+}
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+#happy-cust {
+    --num: 850;
+}
+@keyframes counter-happy-cust {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 850;
+    }
+}
+#comp-proj {
+    --num: 230;
+}
+@keyframes counter-comp-proj {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 230;
+    }
+}
+#lines-code {
+    --num: 9450;
+}
+@keyframes counter-lines-code {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 9450;
+    }
+}
+#f-dload {
+    --num: 780;
+}
+@keyframes counter-f-dload {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 780;
+    }
+}
+.counterSec i {
+    background-color: transparent;
+}
+/* <!-- NumbersEnd --> */
+
+/* <!-- TeamStart --> */
+.teamSec .image-holder {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.teamSec img:hover {
+    transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    -o-transform: scale(1.2, 1.2);
+    transition-duration: .75s;
+}
+.teamSec .social-card {
+    position: absolute;
+    width: 35%;
+    height: 35%;
+    top: 50%;
+    left: 50%;
+    z-index: -3;
+    transition-duration: 1s;
+    padding-top: 40%;
+    background-color: rgba(255, 255, 255, 0.90);
+}
+.teamSec .emp-card:hover .social-card {
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 97%;
+    z-index: 3;
+    transform: rotatey(360deg);
+    -webkit-transform: rotatey(360deg);
+    -moz-transform: rotatey(360deg);
+    -ms-transform: rotatey(360deg);
+    -o-transform: rotatey(360deg);
+}
+/* <!-- TeamEnd --> */
+
+/* <!-- ContactStart --> */
+.data:hover i {
+    color: white;
+    background-color: black;
+}
+/* <!-- ContactEnd --> */
+
+/* <!-- FooterStart --> */
+/* <!-- FooterEnd --> */
